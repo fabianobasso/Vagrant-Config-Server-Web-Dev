@@ -7,7 +7,7 @@ Vagrant.configure("2") do |config|
 	end
   	config.vm.hostname = "devServerWeb"
         config.vm.network "public_network", bridge: "<interface>", ip: "<ip>", hostname: true    
-    	config.vm.synced_folder "app/", "/home/vagrant/app"
+    	config.vm.synced_folder "'Folder Create'/", "/home/vagrant/'Folder Create'"
         config.vm.provision "shell", path: "configServer/configServer.sh"	
 	config.disksize.size = "50GB"  	
 end
